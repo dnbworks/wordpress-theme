@@ -1,8 +1,9 @@
 <!doctype html>
-<html>
+<html <?php language_attributes(); ?>>
 	<head>
-		<meta charset="utf-8">
-		<title>Awesome Theme</title>
+		<meta charset="<?php bloginfo('charset'); ?>">
+		<title><?php bloginfo('name'); ?><?php wp_title('|'); ?></title>
+		<meta name="description" content="<?php bloginfo('description'); ?>">
 		<?php wp_head(); ?>
 	</head>
 	
@@ -34,7 +35,7 @@
 					        <span class="icon-bar"></span>
 					        <span class="icon-bar"></span>
 					      </button>
-					      <a class="navbar-brand" href="#">Awesome Theme</a>
+					      <a class="navbar-brand" href="<?php echo home_url(); ?>"><?php bloginfo('name')?></a>
 					    </div>
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<?php 
@@ -51,7 +52,10 @@
 				
 				</div>
 				
+				<div class="search-form-container">
+					<?php get_search_form(); ?>
+				</div>
+				
 			</div>
 			
 			<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
-	

@@ -1,3 +1,10 @@
+<?php 
+/**
+	* Template Name: special Template
+ */
+
+?>
+
 <?php get_header(); ?>
 
 	<?php 

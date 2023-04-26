@@ -37,14 +37,22 @@
 						</div>
 					</div>
 			
-			<?php $i++; endwhile;
+					<?php $i++; endwhile; ?>
 			
-		endif;
+				<div class="col-xs-6 text-right">
+					<?php previous_posts_link('Newer Posts »'); ?>
+				</div>
+
+				<div class="col-xs-6 text-left">
+					<?php next_posts_link('« Older Posts'); ?>
+				</div>
 				
-		?>
+			<?php endif;
+					wp_reset_query();
+			?>
+			</div>
+		
 		</div>
-	
-	</div>
 	
 	<div class="col-xs-12 col-sm-4">
 		<?php get_sidebar(); ?>
